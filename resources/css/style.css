@@ -1,5 +1,7 @@
-html {
+html,
+  body {
   font-family: sans-serif;
+  height: 100%;
 }
 
 .container {
@@ -58,16 +60,16 @@ div .title {
 
 .learn {
   background-color: lightgrey;
-  border: 1px solid black;
   padding-right: 48px;
 }
 
 .learn img {
   width: 60%;
   padding: 32px 24px;
+  height: auto;
 }
 
-div .flex-content {
+.flex-content {
   display: flex;
 }
 
@@ -83,7 +85,7 @@ div .flex-content {
 }
 
 .learn .first-banner h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 16px 0 16px 0;
 }
 
@@ -94,4 +96,64 @@ div .flex-content {
   padding: 8px 0;
   text-align: center;
   margin-top: 16px;
+}
+
+/*Information Banner*/
+
+.information-left {
+  display: inline-flex;
+  flex-direction: column;
+  width: 60%;
+
+}
+
+.information-left img {
+  padding: 32px 0 32px 24px;
+
+
+}
+
+.information-left h1 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 0 0 24px 24px;
+}
+
+.information-left h2 {
+  font-size: 15px;
+  padding: 0 24px 24px 24px;
+  color: grey;
+}
+
+.information-left h3 {
+  font-size: 12px;
+  color: grey;
+  padding: 0 0 32px 24px;
+
+}
+
+.information-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.information-right .lecture {
+  border: none;
+}
+
+.info-banner {
+  border-bottom: 1px solid grey;
+
+}
+
+.info-img {
+  width: 35%;
+  height: auto;
+  padding: 32px 0 16px 16px;
+}
+
+.info-banner-text {
+  justify-content: center;
+  align-items: center;
 }
