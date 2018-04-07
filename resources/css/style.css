@@ -2,25 +2,26 @@ html,
   body {
   font-family: sans-serif;
   height: 100%;
+  margin: 0 auto;
+  width: 1080px;
+  background-color: black;
 }
 
-.container {
-  display: block;
+section:nth-child(even) {
+  background-color: lightgrey;
 }
+section:nth-child(odd) {
+  background-color: white;
+}
+
+/*Header Content*/
 header {
-  /*position: fixed;*/
-  width: 100%;
+  display: flex;
   height: 64px;
   background-color: white;
   z-index: 1;
-  border: 1px solid black;
-}
-
-header .flex-content {
-  display: flex;
   align-items: center;
-  padding: .5rem 0;
-  margin: 0 24px;
+  padding: .5rem 1.2rem;
 }
 
 header img {
@@ -48,45 +49,53 @@ nav li {
   padding-left: 16px;
 }
 
+ul a:hover {
+  text-decoration: underline;
+}
+
 div .title {
   flex-grow: 1;
 }
 
 /*Learn*/
-
-.banner {
-  position: relative;
+section {
+  display: flex;
 }
 
 .learn {
-  background-color: lightgrey;
-  padding-right: 48px;
+  display: flex;
+  height: 500px;
 }
 
-.learn img {
+.left {
   width: 60%;
   padding: 32px 24px;
-  height: auto;
 }
 
-.flex-content {
+.left img {
+  max-width: 97%;
+
+}
+
+.flex {
   display: flex;
 }
 
 .first-banner {
   flex-direction: column;
   margin: auto;
+  width: 40%;
 }
 
-.learn .first-banner h1 {
-  font-size: 50px;
+.first-banner h1 {
+  font-size: 30px;
   font-weight: bold;
-  margin: 32px 0 16px 0;
+  margin: 32px 60px 16px 0;
 }
 
-.learn .first-banner h2 {
-  font-size: 25px;
-  margin: 16px 0 16px 0;
+.first-banner h2 {
+  font-size: 18px;
+  margin: 16px 80px 16px 0;
 }
 
 .button {
@@ -95,22 +104,20 @@ div .title {
   font-size: 30px;
   padding: 8px 0;
   text-align: center;
-  margin-top: 16px;
+  margin: 16px 80px 0 0;
 }
 
 /*Information Banner*/
 
 .information-left {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   width: 60%;
-
 }
 
 .information-left img {
-  padding: 32px 0 32px 24px;
-
-
+  padding: 32px 24px;
+  height: 370px;
 }
 
 .information-left h1 {
@@ -129,31 +136,112 @@ div .title {
   font-size: 12px;
   color: grey;
   padding: 0 0 32px 24px;
-
 }
 
 .information-right {
   display: flex;
   flex-direction: column;
   width: 40%;
+  border-left: 1px solid grey;
 }
 
-.information-right .lecture {
-  border: none;
-}
 
 .info-banner {
   border-bottom: 1px solid grey;
+}
 
+.info-banner:hover {
+  background-color: lightblue;
 }
 
 .info-img {
   width: 35%;
-  height: auto;
+  height: 150px;
   padding: 32px 0 16px 16px;
 }
 
-.info-banner-text {
+.info-right-text {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
+
+.info-right-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.info-right-text h4 {
+  font-size: 15px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.info-right-text span {
+  font-size: 15px;
+  color: blue;
+  padding-left: 16px;
+}
+
+/*Start Learning*/
+.start-learning {
+  top: 4rem;
+  padding-bottom: 1.5rem;
+  justify-content: center;
+}
+
+section.start-learning h1 {
+  text-align: center;
+  position: ;
+}
+
+.courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-info {
+  height: 276px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem 0.5rem 1rem;
+  background-color: white;
+}
+
+.courses img {
+  max-width: 100%;
+  height: auto;
+}
+
+.courses h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.9rem 0rem 0.5rem 1rem;
+  padding: 0;
+}
+
+.courses h3 {
+  display: inline-block;
+  margin: 0 0 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.courses h4 {
+    margin: 0 0 1.5rem 1rem;
+}
+
+/*Thesis Exhibit*/
+
+.thesis-exhibit {
+  justify-content: center;
+  font-size: 30px;
+  padding: 32px 0;
+}
+
+
+
